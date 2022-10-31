@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41.538" height="49.587" viewBox="0 0 41.538 49.587">
+  <g id="restaurantIcon" transform="translate(-5.064 -1.04)">
+    <g id="XMLID_10_">
+      <path id="XMLID_84_" d="M36.992,8.586A4.346,4.346,0,0,0,31.244,4.44a6.407,6.407,0,0,0-10.626-.145.238.238,0,0,1-.262.093,4.206,4.206,0,0,0-1.179-.18,4.388,4.388,0,0,0-4.4,4.378,4.973,4.973,0,0,0,1.77,4.206v8.014a.059.059,0,0,0,.059.059H34.254a.059.059,0,0,0,.059-.059V12.792A4.639,4.639,0,0,0,36.992,8.586Z" fill="none" stroke="#ff9428" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="XMLID_76_" x2="7.669" transform="translate(16.55 12.792)" fill="none" stroke="#ff9428" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="XMLID_53_" x2="17.761" transform="translate(16.55 16.021)" fill="none" stroke="#ff9428" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="XMLID_41_" d="M20.681,4.491a3.415,3.415,0,0,1,2.993,3.79" fill="none" stroke="#ff9428" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="XMLID_57_" d="M32.193,4.313A4.348,4.348,0,0,0,29.485,5.7" fill="none" stroke="#ff9428" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <path id="XMLID_36_" d="M17.262,22.641a1.508,1.508,0,0,0-1.316,1.853l.083.341a2.3,2.3,0,0,0,1.542,1.645l.361,4.513a3.974,3.974,0,0,0,2.121,3.229l1.617,1.025a6.143,6.143,0,0,0,3.29.955h1.433a6.148,6.148,0,0,0,3.29-.955L31.3,34.221a3.963,3.963,0,0,0,2.121-3.229l.361-4.513a2.3,2.3,0,0,0,1.542-1.645l.083-.341a1.508,1.508,0,0,0-1.316-1.853" fill="none" stroke="#ff9428" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_8" data-name="Path 8" d="M20.568,38.419l5.072,3.375-4.6,3.338a.472.472,0,0,1-.741-.287l-.759-3.657" fill="none" stroke="#ff9428" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_9" data-name="Path 9" d="M30.75,38.419l-5.072,3.375,4.6,3.338a.472.472,0,0,0,.741-.287l.823-3.964" fill="none" stroke="#ff9428" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="XMLID_12_" d="M46.1,50.127a9.768,9.768,0,0,0-6.6-9.242l-8.216-2.811V36.607" fill="none" stroke="#ff9428" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="XMLID_11_" d="M5.564,50.127a9.768,9.768,0,0,1,6.6-9.242l8.214-2.811V36.607" fill="none" stroke="#ff9428" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="XMLID_676_" d="M26.249,28.594l.359-.248a1.2,1.2,0,0,1,1.663.287,4.869,4.869,0,0,0,2.45,2.03.132.132,0,0,1,.036.252c-1.128.456-3.8,1.221-5.078-1.088h-.032c-1.282,2.307-3.917,1.487-5.048,1.031a.132.132,0,0,1,.036-.252,4.887,4.887,0,0,0,2.45-2.03,1.2,1.2,0,0,1,1.663-.287l.359.248Z" fill="none" stroke="#ff9428" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

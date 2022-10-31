@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+  <g id="plus" transform="translate(2.5 2.5)">
+    <path id="Shape" d="M0,0V16" transform="translate(8)" fill="none" stroke="#a1e089" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5"/>
+    <path id="Shape-2" data-name="Shape" d="M0,0H16" transform="translate(0 8)" fill="none" stroke="#a1e089" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5"/>
+  </g>
+</svg>

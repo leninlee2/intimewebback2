@@ -1,0 +1,9 @@
+<svg id="Component_Icon_Google" data-name="Component/Icon/Google" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="Rectangle_220" data-name="Rectangle 220" width="24" height="24" fill="#c4c4c4" opacity="0"/>
+  <g id="Group_202" data-name="Group 202">
+    <path id="Vector" d="M3.546,5.348,2.989,7.427.953,7.47A8.014,8.014,0,0,1,.895,0h0L2.707.332l.794,1.8a4.774,4.774,0,0,0,.045,3.214Z" transform="translate(4 8.321)" fill="#fbbb00"/>
+    <path id="Vector-2" data-name="Vector" d="M7.684,0a8.009,8.009,0,0,1,.14,1.494,8.015,8.015,0,0,1-.175,1.67A8,8,0,0,1,4.833,7.733h0L2.549,7.616,2.226,5.6A4.768,4.768,0,0,0,4.278,3.165H0V0H7.684Z" transform="translate(12.176 10.505)" fill="#518ef8"/>
+    <path id="Vector-3" data-name="Vector" d="M12.055,4.569h0A7.966,7.966,0,0,1,7.047,6.331,8,8,0,0,1,0,2.122L2.593,0A4.757,4.757,0,0,0,7.047,3.087a4.73,4.73,0,0,0,2.4-.651Z" transform="translate(4.953 13.669)" fill="#28b446"/>
+    <path id="Vector-4" data-name="Vector" d="M12.212,1.842,9.62,3.963A4.757,4.757,0,0,0,2.607,6.454L0,4.321H0A8,8,0,0,1,12.212,1.842Z" transform="translate(4.895 4)" fill="#f14336"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="54" viewBox="0 0 54 54">
+  <defs>
+    <filter id="Oval" x="0" y="0" width="54" height="54" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Oval)">
+    <g id="Oval-2" data-name="Oval" transform="translate(12 10)" fill="#f4323f">
+      <path d="M 15 25.5 C 9.210280418395996 25.5 4.5 20.78972053527832 4.5 15 C 4.5 9.210280418395996 9.210280418395996 4.5 15 4.5 C 20.78972053527832 4.5 25.5 9.210280418395996 25.5 15 C 25.5 20.78972053527832 20.78972053527832 25.5 15 25.5 Z" stroke="none"/>
+      <path d="M 15 9 C 11.69158744812012 9 9 11.69158744812012 9 15 C 9 18.30841445922852 11.69158744812012 21 15 21 C 18.30841445922852 21 21 18.30841445922852 21 15 C 21 11.69158744812012 18.30841445922852 9 15 9 M 15 0 C 23.28426742553711 0 30 6.715732574462891 30 15 C 30 23.28426742553711 23.28426742553711 30 15 30 C 6.715732574462891 30 0 23.28426742553711 0 15 C 0 6.715732574462891 6.715732574462891 0 15 0 Z" stroke="none" fill="#fff"/>
+    </g>
+  </g>
+</svg>

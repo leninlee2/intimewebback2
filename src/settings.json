@@ -1,0 +1,67 @@
+{
+    "endpoints":{
+        "address":{
+            "GET":"https://inthetime.herokuapp.com/address/get",
+            "POST":"https://inthetime.herokuapp.com/address/save",
+            "PUT": "https://inthetime.herokuapp.com/address/remove"
+        },
+        "client":{
+            "GET":"https://inthetime.herokuapp.com/client/get",
+            "POST":"https://inthetime.herokuapp.com/client/save",
+            "PUT": "https://inthetime.herokuapp.com/client/remove"
+        },
+        "keyword":{
+            "GET":"https://inthetime.herokuapp.com/keyword/get",
+            "POST":"https://inthetime.herokuapp.com/keyword/save",
+            "PUT": "https://inthetime.herokuapp.com/keyword/remove",
+            "DELETE":"https://inthetime.herokuapp.com/keyword/remove"
+        },
+        "language":{
+            "GET":"https://inthetime.herokuapp.com/language/get",
+            "POST":"https://inthetime.herokuapp.com/language/save",
+            "PUT": "https://inthetime.herokuapp.com/language/remove",
+            "DELETE":"https://inthetime.herokuapp.com/language/remove"
+        },
+        "orderauction":{
+            "GET":"https://inthetime.herokuapp.com/orderauction/get",
+            "POST":"https://inthetime.herokuapp.com/orderauction/save",
+            "PUT": "https://inthetime.herokuapp.com/orderauction/update",
+            "DELETE":"https://inthetime.herokuapp.com/orderauction/delete"
+        },
+        "product":{
+            "GET":"https://inthetime.herokuapp.com/product/get",
+            "POST":"https://inthetime.herokuapp.com/product/save",
+            "PUT":"https://inthetime.herokuapp.com/product/update",
+            "DELETE":"https://inthetime.herokuapp.com/product/remove"
+        },
+        "restaurant":{
+            "GET":"https://inthetime.herokuapp.com/restaurant/get",
+            "POST":"https://inthetime.herokuapp.com/restaurant/save",
+            "PUT": "https://inthetime.herokuapp.com/restaurant/update",
+            "DELETE":"https://inthetime.herokuapp.com/restaurant/update"
+        },
+        "user":{
+            "LOGIN":"https://inthetime.herokuapp.com/user/login",
+            "POST":"https://inthetime.herokuapp.com/user/save",
+            "PUT":"https://inthetime.herokuapp.com/user/remove",
+            "GET":"https://inthetime.herokuapp.com/user/get",
+            "RESET":"https://inthetime.herokuapp.com/user/getlinkreset"
+        },
+        "wallet":{
+            "POST":"https://inthetime.herokuapp.com/wallet/save",
+            "PUT":"https://inthetime.herokuapp.com/wallet/remove",
+            "GET":"https://inthetime.herokuapp.com/wallet/get",
+            "GETBYID":"https://inthetime.herokuapp.com/wallet/getbyid"
+        },
+        "category":{
+            "POST":"https://inthetime.herokuapp.com/category/save",
+            "PUT":"https://inthetime.herokuapp.com/category/remove",
+            "GET":"https://inthetime.herokuapp.com/category/get"
+        },
+        "status":{
+            "POST":"https://inthetime.herokuapp.com/status/save",
+            "PUT":"https://inthetime.herokuapp.com/status/remove",
+            "GET":"https://inthetime.herokuapp.com/status/get"
+        }
+    }
+}

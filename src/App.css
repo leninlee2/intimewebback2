@@ -1,0 +1,256 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pointer{
+  cursor: pointer !important;
+}
+
+/*width*/
+
+.wbuttonmove{
+  width:50px;
+  margin-top:5px;
+}
+
+.c100{
+  min-width:100% !important;
+}
+
+.h50{
+  height: 50px !important;
+}
+
+.h20{
+  height: 20px !important;
+}
+
+.w20{
+  width: 20px !important;
+}
+
+.h25{
+  height: 25px !important;
+}
+
+.h30{
+  height: 30px !important;
+}
+
+.h300{
+  height: 300px !important;
+}
+
+.h100{
+  height: 100px !important;
+}
+
+.hide{
+  display: none;
+}
+
+.scroll{
+  overflow: scroll;
+}
+
+ /* colors */
+
+ .solid{
+   border-style:solid;
+ }
+
+ .activeicon{
+  color:green;
+  font-size:25px;
+}
+
+.inactiveicon{
+  color:red;
+  font-size:25px;
+}
+
+.fwhite{
+  color:white;
+}
+
+.bred{
+  background-color: red;
+}
+
+.baguablue{
+  background-color: rgb(236,241,246);
+}
+
+.baguablue2{
+  background-color: rgb(220,229,238) !important;
+}
+
+.baguablue3{
+  background-color: rgb(50,107,160) !important;
+}
+
+.yellow{
+  background-color: rgb(233,204,0) !important;
+}
+
+.borderdash{
+  border-style:dashed;
+}
+
+
+/* size */
+
+.w50{
+  width: 50px;
+}
+
+.w60{
+  width: 60px;
+}
+
+.w80{
+  width: 80px;
+}
+
+.w80p{
+  width: 90% !important;
+}
+
+.t10 {
+  margin-left: 10px;
+}
+
+.mt5{
+  margin-top: 5px;
+}
+
+.mt20p{
+  margin-top: 20% !important;
+}
+
+.left{
+  float:left;
+}
+
+.messagelabel{
+  background-color: white;
+  font-weight: bold;
+  color:blue;
+  width: 100px;
+}
+
+/* alignment */
+.l20p{
+  float:right;
+  margin-right:200px;
+}
+
+.top {
+  position: absolute;
+  top: 0;
+}
+
+.overlay{
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 50px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 20; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
