@@ -1,54 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js' ></script>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-      #map {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-      }
-    </style>
-
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script>
-          /*
-          var access_token = 'pk.eyJ1IjoibGVuaW5sZWUiLCJhIjoiY2tuMHIyMmd6MG4waTJwbzJxajFiazB0bCJ9.z-1ChfeCZlSdg4NlIwX1Lg';
-          var loaded       = 0;
-          var address_origin      = '';
-          var address_destination = '';
-          var basesearch   = 'https://api.mapbox.com/geocoding/v5/mapbox.places/{address}.json?access_token={access_token}';
-          $(document).ready(function(){
+var access_token = 'pk.eyJ1IjoibGVuaW5sZWUiLCJhIjoiY2tuMHIyMmd6MG4waTJwbzJxajFiazB0bCJ9.z-1ChfeCZlSdg4NlIwX1Lg';
+var loaded       = 0;
+var address_origin      = '';
+var address_destination = '';
+var basesearch   = 'https://api.mapbox.com/geocoding/v5/mapbox.places/{address}.json?access_token={access_token}';
               
               setInterval(function(){
                 var url = window.location.href;
@@ -97,8 +51,7 @@
                   LoadMapOriginDestination(origin,destination);
 
                 }
-              },1000);
-          });//document ready
+          },1000);
 
           function successFunction(position) 
           {
@@ -279,113 +232,3 @@
                   console.error('Detail-2:' + error);
               });
           }
-
-        */
-
-          
-    </script>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-
-                            //marker.setText('Marker 1');
-              
-                    //alert('Before marker');
-                    //start point marker
-                    //var popup2 = new mapboxgl.Popup()
-                    //.setText('Description 2')
-                    //.addTo(map);
-              
-              
-                    //var marker2 = new mapboxgl.Marker({
-                    //  color: "#FFFFFF",
-                    //  draggable: true,
-                    //  description: 'Second point'
-                    //}) // Initialize a new marker
-                    //.setLngLat([-122.26, 37.89]) // Marker [lng, lat] coordinates
-                    //.addTo(map).setPopup(popup2); // Add the marker to the map
-                    //end point marker
-              
-                  //alert('Second marker');
-              
-                  /* Example of GeoCoder */
-                  //var geocoder = new MapboxGeocoder({
-                  //// Initialize the geocoder
-                  //accessToken: mapboxgl.accessToken, // Set the access token
-                  //mapboxgl: mapboxgl, // Set the mapbox-gl instance
-                  //marker: false, // Do not use the default marker style
-                  //placeholder: 'Search for places in Berkeley', // Placeholder text for the search bar
-                  //bbox: [-122.30937, 37.84214, -122.23715, 37.89838], // Boundary for Berkeley
-                  //proximity: {
-                  //longitude: -122.25948,
-                  //latitude: 37.87221
-                  //} // Coordinates of UC Berkeley
-                  //});
-                  
-                  // Add the geocoder to the map
-                  //map.addControl(geocoder);
-              
-                  // Add the geocoder to the map
-                  //map.addControl(geocoder);
-              
-                  // After the map style has loaded on the page,
-                  // add a source layer and default styling for a single point
-                  //map.on('load', function () {
-                  //    //alert('Executing');
-                  //    map.addSource('single-point', {
-                  //    'type': 'geojson',
-                  //    'data': {
-                  //    'type': 'FeatureCollection',
-                  //    'features': []
-                  //    }
-                  //  });
-                  //
-                  //  map.addLayer({
-                  //  'id': 'point',
-                  //  'source': 'single-point',
-                  //  'type': 'circle',
-                  //  'paint': {
-                  //  'circle-radius': 10,
-                  //  'circle-color': '#448ee4'
-                  //  }
-                  //  });
-                  
-                  //// Listen for the `result` event from the Geocoder // `result` event is triggered when a user makes a selection
-                  ////  Add a marker at the result's coordinates
-                  //geocoder.on('result', function (e) {
-                  //  map.getSource('single-point').setData(e.result.geometry);
-                  //});
-                //});
-
-                //alert('before geocoder');
-              
-                  /* Example of GeoCoder */
-                  //var geocoder = new MapboxGeocoder({
-                  //// Initialize the geocoder
-                  //  accessToken: mapboxgl.accessToken, // Set the access token
-                  //  mapboxgl: mapboxgl, // Set the mapbox-gl instance
-                  //  marker: false, // Do not use the default marker style
-                  //  placeholder: 'Search for places in Berkeley', // Placeholder text for the search bar
-                  //  bbox: [-122.30937, 37.84214, -122.23715, 37.89838], // Boundary for Berkeley
-                  //  proximity: {
-                  //  longitude: -122.25948,
-                  //  latitude: 37.87221
-                  //  } // Coordinates of UC Berkeley
-                  //});
-
-                  //alert('after geocoder');
-              
-                  // After the map style has loaded on the page,
-                  // add a source layer and default styling for a single point
-
-    -->
-      Example GeoCoder
-      <div id='map'></div>
-  </body>
-</html>
