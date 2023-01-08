@@ -42,6 +42,7 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script>
+          /*
           var access_token = 'pk.eyJ1IjoibGVuaW5sZWUiLCJhIjoiY2tuMHIyMmd6MG4waTJwbzJxajFiazB0bCJ9.z-1ChfeCZlSdg4NlIwX1Lg';
           var loaded       = 0;
           var address_origin      = '';
@@ -51,7 +52,7 @@
               
               setInterval(function(){
                 var url = window.location.href;
-                //single location:
+
                 if(url.indexOf('mapboxinterval') < 0
                   && url.indexOf('mapbox') > 0
                   && url.indexOf('mapboxcoordinate') < 0
@@ -60,10 +61,10 @@
                   var url   = decodeURI(window.location.href);
                   var items = url.split('/');
                   address_origin = items[items.length-1];
-                  //alert(address); 
+   
                   var url_search = basesearch.replace('{address}',address_origin).replace('{access_token}',access_token);
                   getTransactionSearch(url_search,LoadMapBoxSearch);
-                  //LoadMap();
+
                 }
                 
                 //with origin and destination:
@@ -74,11 +75,10 @@
                   var items = url.split('/');
                   address_origin = items[items.length-2];
                   address_destination = items[items.length-1];
-                  //alert(address); 
                   var url_search_origin = basesearch.replace('{address}',address_origin).replace('{access_token}',access_token);
                   var url_search_destination = basesearch.replace('{address}',address_destination).replace('{access_token}',access_token);
                   getTransactionSearchDestination(url_search_origin,url_search_destination,LoadDestination);
-                  //LoadMap();
+
                 }
 
                 //alert(loaded);
@@ -93,10 +93,9 @@
                   var origin = [];var destination = [];
                   origin[0] = {place_name:'you',center:[address_origin.split(',')[0],address_origin.split(',')[1]]};
                   destination[0] = {place_name:'runner',center:[address_destination.split(',')[0],address_destination.split(',')[1]]};
-                  //alert(JSON.stringify(origin));
-                  //alert(JSON.stringify(destination));
+
                   LoadMapOriginDestination(origin,destination);
-                  //LoadMap();
+
                 }
               },1000);
           });//document ready
@@ -114,23 +113,14 @@
           }
 
           function LoadMapBoxSearch(data){
-            //alert('LoadMapBoxSearch-executed');
-            //alert(JSON.stringify(data));
-            //alert(data.features);
-            //for(var i = 0;i < data.features.length;i++){
-            //  alert(JSON.stringify(data.features[i]));
-            //}
             LoadMap(data.features);
           }
 
           function LoadMap(features){
-                  //alert('main load');
-                  //alert('Test');
-                  //alert($('#map').html());
+
                   var start_position = [-122.25948, 37.87221];
 
                   if(features.length > 0){
-                    //alert('Features:' + JSON.stringify(features[0]) );
                     start_position = features[0].center;
                   }
 
@@ -141,97 +131,20 @@
                     center: start_position, // Starting position [lng, lat]
                     zoom: 12, // Starting zoom level
                   });
-                  //alert('Point 1');
-              
-                  //var marker1 = new mapboxgl.Popup()
-                  //  .setText('Marker 1')
-                  //  .addTo(map);
-                  //alert('features:' + features.length);
-                  //var popups = [];
-                  //var markers = [];
 
                   for(var i = 0;i < features.length;i++){
 
-                      //alert(features[i].place_name);
-                      //alert(JSON.stringify(features[i]));
                       var popup = new mapboxgl.Popup()
                       .setText(features[i].place_name)
                       .addTo(map);
 
-                      /* first marker */
+
                       var marker = new mapboxgl.Marker() // Initialize a new marker
                         .setLngLat(features[i].center) // Marker [lng, lat] coordinates
                         .addTo(map).setPopup(popup); // Add the marker to the map
                   }
               
-                    //marker.setText('Marker 1');
-              
-                    //alert('Before marker');
-                    //start point marker
-                    //var popup2 = new mapboxgl.Popup()
-                    //.setText('Description 2')
-                    //.addTo(map);
-              
-              
-                    //var marker2 = new mapboxgl.Marker({
-                    //  color: "#FFFFFF",
-                    //  draggable: true,
-                    //  description: 'Second point'
-                    //}) // Initialize a new marker
-                    //.setLngLat([-122.26, 37.89]) // Marker [lng, lat] coordinates
-                    //.addTo(map).setPopup(popup2); // Add the marker to the map
-                    //end point marker
-              
-                  //alert('Second marker');
-              
-                  /* Example of GeoCoder */
-                  //var geocoder = new MapboxGeocoder({
-                  //// Initialize the geocoder
-                  //accessToken: mapboxgl.accessToken, // Set the access token
-                  //mapboxgl: mapboxgl, // Set the mapbox-gl instance
-                  //marker: false, // Do not use the default marker style
-                  //placeholder: 'Search for places in Berkeley', // Placeholder text for the search bar
-                  //bbox: [-122.30937, 37.84214, -122.23715, 37.89838], // Boundary for Berkeley
-                  //proximity: {
-                  //longitude: -122.25948,
-                  //latitude: 37.87221
-                  //} // Coordinates of UC Berkeley
-                  //});
-                  
-                  // Add the geocoder to the map
-                  //map.addControl(geocoder);
-              
-                  // Add the geocoder to the map
-                  //map.addControl(geocoder);
-              
-                  // After the map style has loaded on the page,
-                  // add a source layer and default styling for a single point
-                  //map.on('load', function () {
-                  //    //alert('Executing');
-                  //    map.addSource('single-point', {
-                  //    'type': 'geojson',
-                  //    'data': {
-                  //    'type': 'FeatureCollection',
-                  //    'features': []
-                  //    }
-                  //  });
-                  //
-                  //  map.addLayer({
-                  //  'id': 'point',
-                  //  'source': 'single-point',
-                  //  'type': 'circle',
-                  //  'paint': {
-                  //  'circle-radius': 10,
-                  //  'circle-color': '#448ee4'
-                  //  }
-                  //  });
-                  
-                  //// Listen for the `result` event from the Geocoder // `result` event is triggered when a user makes a selection
-                  ////  Add a marker at the result's coordinates
-                  //geocoder.on('result', function (e) {
-                  //  map.getSource('single-point').setData(e.result.geometry);
-                  //});
-                //});
+
           }
 
 
@@ -239,19 +152,6 @@
           function LoadMapOriginDestination(origin,destination){
 
                   var start_position = [-122.25948, 37.87221];
-                  //alert(JSON.stringify(origin) );
-                  //alert(JSON.stringify(destination));
-                  //var workaround = false;
-                  /*
-                  if (navigator.geolocation)
-                  {
-                      navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
-                  }
-                  else 
-                  {
-                      alert('It seems like Geolocation, which is required for this page, is not enabled in your browser.');
-                  }
-                  */
 
                   if(origin.length > 0){
                     start_position = origin[0].center;
@@ -283,32 +183,12 @@
                         .setText(destination[0].place_name)
                         .addTo(map);
 
-                        /* first marker */
                         var marker = new mapboxgl.Marker() // Initialize a new marker
                           .setLngLat(destination[0].center) // Marker [lng, lat] coordinates
                           .addTo(map).setPopup(popup); // Add the marker to the map
                   }
                             
-                  //alert('before geocoder');
-              
-                  /* Example of GeoCoder */
-                  //var geocoder = new MapboxGeocoder({
-                  //// Initialize the geocoder
-                  //  accessToken: mapboxgl.accessToken, // Set the access token
-                  //  mapboxgl: mapboxgl, // Set the mapbox-gl instance
-                  //  marker: false, // Do not use the default marker style
-                  //  placeholder: 'Search for places in Berkeley', // Placeholder text for the search bar
-                  //  bbox: [-122.30937, 37.84214, -122.23715, 37.89838], // Boundary for Berkeley
-                  //  proximity: {
-                  //  longitude: -122.25948,
-                  //  latitude: 37.87221
-                  //  } // Coordinates of UC Berkeley
-                  //});
-
-                  //alert('after geocoder');
-              
-                  // After the map style has loaded on the page,
-                  // add a source layer and default styling for a single point
+                  
                   map.on('load', function () {
                       loaded=1;
                       map.addSource('route', {
@@ -400,6 +280,8 @@
               });
           }
 
+        */
+
           
     </script>
     <!--
@@ -411,6 +293,98 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
+
+                            //marker.setText('Marker 1');
+              
+                    //alert('Before marker');
+                    //start point marker
+                    //var popup2 = new mapboxgl.Popup()
+                    //.setText('Description 2')
+                    //.addTo(map);
+              
+              
+                    //var marker2 = new mapboxgl.Marker({
+                    //  color: "#FFFFFF",
+                    //  draggable: true,
+                    //  description: 'Second point'
+                    //}) // Initialize a new marker
+                    //.setLngLat([-122.26, 37.89]) // Marker [lng, lat] coordinates
+                    //.addTo(map).setPopup(popup2); // Add the marker to the map
+                    //end point marker
+              
+                  //alert('Second marker');
+              
+                  /* Example of GeoCoder */
+                  //var geocoder = new MapboxGeocoder({
+                  //// Initialize the geocoder
+                  //accessToken: mapboxgl.accessToken, // Set the access token
+                  //mapboxgl: mapboxgl, // Set the mapbox-gl instance
+                  //marker: false, // Do not use the default marker style
+                  //placeholder: 'Search for places in Berkeley', // Placeholder text for the search bar
+                  //bbox: [-122.30937, 37.84214, -122.23715, 37.89838], // Boundary for Berkeley
+                  //proximity: {
+                  //longitude: -122.25948,
+                  //latitude: 37.87221
+                  //} // Coordinates of UC Berkeley
+                  //});
+                  
+                  // Add the geocoder to the map
+                  //map.addControl(geocoder);
+              
+                  // Add the geocoder to the map
+                  //map.addControl(geocoder);
+              
+                  // After the map style has loaded on the page,
+                  // add a source layer and default styling for a single point
+                  //map.on('load', function () {
+                  //    //alert('Executing');
+                  //    map.addSource('single-point', {
+                  //    'type': 'geojson',
+                  //    'data': {
+                  //    'type': 'FeatureCollection',
+                  //    'features': []
+                  //    }
+                  //  });
+                  //
+                  //  map.addLayer({
+                  //  'id': 'point',
+                  //  'source': 'single-point',
+                  //  'type': 'circle',
+                  //  'paint': {
+                  //  'circle-radius': 10,
+                  //  'circle-color': '#448ee4'
+                  //  }
+                  //  });
+                  
+                  //// Listen for the `result` event from the Geocoder // `result` event is triggered when a user makes a selection
+                  ////  Add a marker at the result's coordinates
+                  //geocoder.on('result', function (e) {
+                  //  map.getSource('single-point').setData(e.result.geometry);
+                  //});
+                //});
+
+                //alert('before geocoder');
+              
+                  /* Example of GeoCoder */
+                  //var geocoder = new MapboxGeocoder({
+                  //// Initialize the geocoder
+                  //  accessToken: mapboxgl.accessToken, // Set the access token
+                  //  mapboxgl: mapboxgl, // Set the mapbox-gl instance
+                  //  marker: false, // Do not use the default marker style
+                  //  placeholder: 'Search for places in Berkeley', // Placeholder text for the search bar
+                  //  bbox: [-122.30937, 37.84214, -122.23715, 37.89838], // Boundary for Berkeley
+                  //  proximity: {
+                  //  longitude: -122.25948,
+                  //  latitude: 37.87221
+                  //  } // Coordinates of UC Berkeley
+                  //});
+
+                  //alert('after geocoder');
+              
+                  // After the map style has loaded on the page,
+                  // add a source layer and default styling for a single point
+
     -->
+      Example GeoCoder
   </body>
 </html>
