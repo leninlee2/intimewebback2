@@ -1,6 +1,6 @@
 function MapBoxCoordinate(){
     return (
-        <div id='map'></div>
+        <div id='map2'></div>
     );
 }
 
